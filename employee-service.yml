@@ -9,6 +9,8 @@ spring:
     properties:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
+  boot:
+    message: Hello, Employee service!
 server:
   port: 8081 #servisin calısacagı port
 

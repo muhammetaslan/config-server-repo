@@ -11,6 +11,8 @@ spring:
         dialect: org.hibernate.dialect.MySQL8Dialect
   boot:
     message: Hello, Department service updatedd
+  zipkin:
+    base-url: http://127.0.0.1:9411/
 
 server:
   port: 8080 #servisin calısacagı port

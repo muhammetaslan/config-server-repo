@@ -13,3 +13,33 @@ spring:
     message: Hello, Organizations_user service!
 server:
   port: 8083 #servisin calısacagı port
+
+logging:
+  pattern:
+    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+  level:
+    org:
+      springframework:
+        web: DEBUG
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+    enabled: true
+  zipkin:
+    tracing:
+      endpoint: http://127.0.0.1:9411/api/v2/spans
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always  # /health için tüm detayları aktive eder.
+    shutdown:
+      enabled: true  # [ POST ] http://localhost:8080/actuator/shutdown end point'in çalışmasına imkan verir  değeri true ya çekerek.
+
+  info:
+    env:
+      enabled: true       # /info için verileri aktive eder.

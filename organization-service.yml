@@ -1,1 +1,15 @@
-
+spring:
+  datasource:
+    password: organizations_user_123
+    url: jdbc:mysql://localhost:3302/organizations_db
+    username: organizations_user
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+  boot:
+    message: Hello, Organizations_user service!
+server:
+  port: 8083 #servisin calısacagı port

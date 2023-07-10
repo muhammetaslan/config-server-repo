@@ -25,6 +25,6 @@ eureka:
     lease-renewal-interval-in-seconds: 10
     instance-id: ${spring.application.name}:${random.uuid}
 
-logging:
-  pattern:
-    level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"
+# logging:
+#   pattern:
+#     level: "%5p [${spring.application.name:},%X{traceId:-},%X{spanId:-}]"

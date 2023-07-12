@@ -20,7 +20,9 @@ logging:
   level:
     org:
       springframework:
-        web: DEBUG
+        web:
+          servlet:
+            DispatcherServlet: DEBUG
 
 management:
   tracing:
